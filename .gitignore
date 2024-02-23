@@ -1,0 +1,22 @@
+/node_modules
+/dist
+/.idea
+/.DS_Store
+*.log
+test.js
+
+/uploads/**
+!/uploads/README.md
+
+package-lock.json
+*draft*
+
+/nft-whales/**
+!/nft-whales/README.md
+
+/invitations/**
+!/invitations/README.md
+
+# Hardhat files
+cache
+artifacts
