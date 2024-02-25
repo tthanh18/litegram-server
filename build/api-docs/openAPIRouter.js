@@ -14,6 +14,6 @@ exports.openAPIRouter = (() => {
         res.setHeader('Content-Type', 'application/json');
         res.send(openAPIDocument);
     });
-    router.use('/', swagger_ui_express_1.default.serve, swagger_ui_express_1.default.setup(openAPIDocument));
+    router.use('/docs', swagger_ui_express_1.default.serve, swagger_ui_express_1.default.setup(openAPIDocument));
     return router;
 })();

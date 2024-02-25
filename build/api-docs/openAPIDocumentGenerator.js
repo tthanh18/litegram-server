@@ -7,8 +7,8 @@ exports.generateOpenAPIDocument = void 0;
 const swagger_jsdoc_1 = __importDefault(require("swagger-jsdoc"));
 function generateOpenAPIDocument() {
     return (0, swagger_jsdoc_1.default)({
-        swaggerDefinition: {
-            restapi: '3.0.0',
+        definition: {
+            openapi: '3.0.0',
             info: {
                 title: 'Litegram API',
                 version: '1.0.0',
@@ -16,11 +16,14 @@ function generateOpenAPIDocument() {
             },
             servers: [
                 {
-                    url: 'http://localhost:3000',
+                    url: 'http://localhost:4000',
                 },
             ],
         },
-        apis: ['**/*.ts'],
+        apis: [
+            // '**/*.ts'
+            'src/modules/**/*.ts',
+        ],
     });
 }
 exports.generateOpenAPIDocument = generateOpenAPIDocument;

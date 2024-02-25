@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const envConfig_1 = require("@common/utils/envConfig");
 const server_1 = require("./server");
 const port = (0, envConfig_1.getPort)();
-const server = server_1.app.listen(port, () => {
+const server = server_1.app.listen(4000, () => {
     server_1.logger.info('Server listen on port: ' + port);
 });
 const onCloseSignal = () => {
